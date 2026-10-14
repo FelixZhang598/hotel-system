@@ -1,0 +1,128 @@
+{
+  "at": "2026-10-14T07:53:51.064Z",
+  "base": "http://127.0.0.1:18084",
+  "group": "all",
+  "hotelDate": "2026-10-14",
+  "results": [
+    {
+      "id": "A01",
+      "name": "authentication and role restrictions",
+      "status": "PASS"
+    },
+    {
+      "id": "A24",
+      "name": "CSRF rejects mutation",
+      "status": "PASS"
+    },
+    {
+      "id": "A32",
+      "name": "session invalidation and refreshed CSRF",
+      "status": "PASS"
+    },
+    {
+      "id": "A02",
+      "name": "order ownership",
+      "status": "PASS"
+    },
+    {
+      "id": "A03",
+      "name": "half-open stay and price",
+      "status": "PASS"
+    },
+    {
+      "id": "A04",
+      "name": "invalid dates and capacity",
+      "status": "PASS"
+    },
+    {
+      "id": "A05",
+      "name": "multi-night failure rolls back all nights",
+      "status": "PASS"
+    },
+    {
+      "id": "A06",
+      "name": "concurrent last room",
+      "status": "PASS"
+    },
+    {
+      "id": "A07",
+      "name": "concurrent identical request creates one order",
+      "status": "PASS"
+    },
+    {
+      "id": "A08",
+      "name": "key payload mismatch",
+      "status": "PASS"
+    },
+    {
+      "id": "A09",
+      "name": "cancel releases only once",
+      "status": "PASS"
+    },
+    {
+      "id": "A10",
+      "name": "same-day guest cancel forbidden frontdesk allowed",
+      "status": "PASS"
+    },
+    {
+      "id": "A23",
+      "name": "missing/out-of-window inventory rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "A25",
+      "name": "filters pagination validation",
+      "status": "PASS"
+    },
+    {
+      "id": "A30",
+      "name": "lost response replay",
+      "status": "PASS"
+    },
+    {
+      "id": "A11",
+      "name": "no-show releases future only",
+      "status": "PASS"
+    },
+    {
+      "id": "A12",
+      "name": "fully past no-show",
+      "status": "PASS"
+    },
+    {
+      "id": "A14",
+      "name": "non-today and cancelled check-in rejected",
+      "status": "PASS"
+    },
+    {
+      "id": "A18",
+      "name": "checkout preserves historical inventory",
+      "status": "PASS"
+    },
+    {
+      "id": "A13/A15/A19/A20/A21",
+      "name": "room lifecycle checks",
+      "status": "PASS"
+    },
+    {
+      "id": "A17",
+      "name": "overdue room remains occupied",
+      "status": "PASS"
+    },
+    {
+      "id": "A16",
+      "name": "concurrent room allocation",
+      "status": "PASS"
+    },
+    {
+      "id": "A31",
+      "name": "cancel vs check-in atomicity",
+      "status": "PASS"
+    },
+    {
+      "id": "A22",
+      "name": "database lock timeout rolls back",
+      "status": "PASS"
+    }
+  ]
+}

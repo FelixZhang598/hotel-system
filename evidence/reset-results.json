@@ -1,0 +1,12 @@
+[
+  {
+    "case": "A33 idle manual non-default-port instance blocks reset",
+    "status": "PASS",
+    "stderr": "数据库仍被进程打开，请先停止所有使用此数据库的实例。"
+  },
+  {
+    "case": "A33 stopped instance reset succeeds",
+    "status": "PASS",
+    "stdout": "演示数据库已重置，下次启动会生成相对当天的数据。"
+  }
+]

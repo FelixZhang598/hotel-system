@@ -1,0 +1,16 @@
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    session:
+      cookie:
+        http-only: true
+        same-site: lax
+      timeout: 30m
+spring:
+  application:
+    name: hotel-backend
+  jackson:
+    deserialization:
+      accept-float-as-int: false
+hotel:
+  database: ${HOTEL_DB:../data/hotel.db}

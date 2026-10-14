@@ -1,0 +1,3 @@
+*.cmd text eol=crlf
+evidence/conversations/original-conversation.md whitespace=-blank-at-eol
+evidence/*.log whitespace=-blank-at-eol

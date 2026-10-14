@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-14T07:54:25.567Z",
+  "base": "http://127.0.0.1:18084",
+  "dbPath": "/Users/felix/IdeaProjects/hotel-system/.runtime/acceptance/final/hotel.db",
+  "jarSha256": "de7cbaa444d2813b6eb5684e80bb16e0e8727c0ceb2aa1d25865fd10457ecd53",
+  "status": "PASS",
+  "pid": 33612,
+  "idleOutput": "COMMAND   PID  USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME\njava    33612 felix    8u   REG    1,5   114688 4205683 /Users/felix/IdeaProjects/hotel-system/.runtime/acceptance/final/hotel.db\njava    33612 felix   17u   REG    1,5   114688 4205683 /Users/felix/IdeaProjects/hotel-system/.runtime/acceptance/final/hotel.db\n",
+  "commands": [
+    {
+      "command": [
+        "lsof",
+        "-nP",
+        "-iTCP:18084",
+        "-sTCP:LISTEN"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lsof",
+        "-nP",
+        "--",
+        "/Users/felix/IdeaProjects/hotel-system/.runtime/acceptance/final/hotel.db"
+      ],
+      "exitCode": 0,
+      "stdout": "COMMAND   PID  USER   FD   TYPE DEVICE SIZE/OFF    NODE NAME\njava    33612 felix    8u   REG    1,5   114688 4205683 /Users/felix/IdeaProjects/hotel-system/.runtime/acceptance/final/hotel.db\njava    33612 felix   17u   REG    1,5   114688 4205683 /Users/felix/IdeaProjects/hotel-system/.runtime/acceptance/final/hotel.db\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "lsof",
+        "-nP",
+        "--",
+        "/Users/felix/IdeaProjects/hotel-system/.runtime/acceptance/final/hotel.db"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "scope": "Idle lifetime ownership and release verified; demo reset execution belongs to root."
+}

@@ -1,16 +1,16 @@
 # 酒店系统 MVP Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** 交付可本地运行和演示的酒店系统，包含预订、查询、入住、退房、清洁，以及真实过程与验收材料。
 
 **Architecture:** 前后端分离，单机单 Java 后端访问 SQLite。预订按房型逐晚占库存，入住才分房；所有业务写操作统一进入 IMMEDIATE 写事务。
 
-**Tech Stack:** Vue 3、TypeScript、Vite、Element Plus、Vue Router、Pinia；Java 21、Spring Boot 3、Spring JDBC、Spring Security、SQLite JDBC；npm、Maven Wrapper。
+**Tech Stack:** Vue 3、TypeScript、Vite、Element Plus、Vue Router、Pinia；Java 26、Spring Boot 4.0、Spring JDBC、Spring Security、SQLite JDBC；npm、Maven Wrapper。
 
 **Spec:** [已确认需求与技术方案](../specs/2026-10-14-hotel-design.md)，执行前同时阅读 [验收用例](../../acceptance-cases.md)。
 
-状态：计划已编写，待用户审阅；所有任务未实施。本文件中的路径是计划路径，不代表文件已经存在。
+状态：已实施交付。实际文件以源码为准，部分相邻 UI 组件复用；验收见 evidence/acceptance-results.md，A29 异地浏览器时区模拟未执行。
 
 ## Global Constraints
 
@@ -21,7 +21,7 @@
 - 如需 Python 辅助工具，统一通过 uv 和 Python 3.12 运行。
 - 原始 AI 会话不能用摘要替代，不伪造执行结果、截图或 Agent 使用记录。
 - 优先在合适边界使用子 Agent，服从工具实际并发上限，不超过用户要求的 6 个。
-- 当前仅编写计划，不创建业务工程、不安装依赖、不执行下面的实施命令。
+- 用户已授权开始实施；执行下列任务，禁止执行单元测试。
 
 ## Review Focus
 
@@ -37,7 +37,7 @@
 
 | 路径 | 职责 |
 |---|---|
-| backend/pom.xml、backend/mvnw、backend/.mvn/wrapper/ | 固定依赖和 Java 21 构建 |
+| backend/pom.xml、backend/mvnw、backend/.mvn/wrapper/ | 固定依赖和 Java 26 构建 |
 | J/HotelApplication.java、R/application.yml | 后端入口、端口及数据目录配置 |
 | J/common/HotelClock.java、ApiExceptionHandler.java、ApiError.java、PageResult.java | 酒店日期、统一错误、分页 |
 | J/config/DatabaseConfig.java、J/database/WriteTransactions.java | SQLite 连接参数和唯一写事务入口 |
@@ -163,7 +163,7 @@
 
 沿用用户“尽量使用 subagent 并行处理”的偏好：一个后端实施 Agent、一个前端实施 Agent；主 Agent 负责契约、集成和验收。按需使用第三个子 Agent 做独立审查。当前工具最多同时 4 个 Agent（含主 Agent），因此最多 3 个子 Agent。数据库、共享类型和锁文件按文件所有权串行修改，不让两个 Agent 同时改同一文件。每个完成任务安排独立审查，修复后再推进依赖任务；最终做整体审查。
 
-当前目录没有 Git 仓库：实施时先建立本项目独立仓库，保存已有文档，再按阶段提交。是否需要工作树在执行时按相关技能判断，不能把整个 IdeaProjects 初始化成仓库。
+项目已建立独立 Git 仓库与 feat/hotel-mvp 分支，保存文档与实现。是否需要工作树在执行时按相关技能判断，不能把整个 IdeaProjects 初始化成仓库。
 
 ## 自查结果与交接
 
@@ -172,5 +172,5 @@
 - 需求覆盖：登录/权限→2；房型/预订/查询/取消→3、5；分房/退房/清洁/未到店→4、6；运行与材料→1、7。
 - 验证覆盖：既有 A01–A28 均有任务归属，新增审查边界 A29–A33 均有负责任务。
 - 接口一致：身份统一 CurrentUser；日期 checkIn/checkOut；金额分；状态枚举沿用正式方案；前后端共享契约优先完成。
-- 执行限制：全部构建跳过单元测试；当前没有执行任何实施任务，所有复选框保持未勾选。
+- 执行限制：全部构建跳过单元测试；已按用户约束完成实施与运行时验证；完成标记表示交付任务完成，不表示每个可选验收变体都已运行。
 - 交接：用户审阅本计划后进入实施，沿用上述子 Agent 分工偏好，不再次询问已确定的技术栈和执行方式。

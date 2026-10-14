@@ -1,12 +1,12 @@
 # 酒店系统 MVP 需求与技术方案
 
-日期：2026-10-14。状态：正式文档提交审阅后，用户回复“继续”，已进入实施计划阶段。当前阶段仅文档设计，未实现业务代码。
+日期：2026-10-14。状态：用户授权实施后已实现并完成实际验收；最终 Java26 / Spring Boot4.0.8。验收覆盖及限制见 evidence/acceptance-results.md。
 
 ## 1. 目标与约束
 
 用于 AI Coding 面试，交付可运行、可演示的酒店系统及完整过程材料。单酒店，住客预订端和前台管理端，前后端分离，Java 后端、SQLite 数据库，不接真实或模拟支付。
 
-技术栈：Vue 3、TypeScript、Vite、Element Plus、Vue Router、Pinia；Java 21、Spring Boot 3、Spring JDBC、Spring Security、SQLite JDBC；npm 和 Maven Wrapper。实施前核对兼容性并固定具体依赖版本。单机单后端实例，不引入 Redis、消息队列、分布式锁。
+技术栈：Vue 3、TypeScript、Vite、Element Plus、Vue Router、Pinia；Java 26、Spring Boot 4.0、Spring JDBC、Spring Security、SQLite JDBC；npm 和 Maven Wrapper。实施前核对兼容性并固定具体依赖版本。单机单后端实例，不引入 Redis、消息队列、分布式锁。
 
 用户约束：不执行单元测试。验证采用构建、接口验收、浏览器验收、并发请求及数据库核对。如需 Python 辅助工具，统一通过 uv 和 Python 3.12 运行。优先在合适边界使用子 Agent，服从工具实际并发上限，不超过用户要求的 6 个。
 

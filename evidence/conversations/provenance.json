@@ -1,0 +1,23 @@
+{
+  "exportedAt": "2026-10-14T08:03:29.056Z",
+  "selection": "Original user/assistant visible message payloads only; excludes analysis, system/developer and tool messages.",
+  "sources": [
+    {
+      "source": "rollout-2026-10-14T15-05-46-01a1393b-3df3-79f3-b736-992eb7773dec.jsonl",
+      "sha256": "d7b05ebe29294f948b2e68f8a0c7d1c1e508a182094cec2290817a485b250909"
+    },
+    {
+      "source": "rollout-2026-10-14T15-14-36-01a1393b-3df3-79f3-b736-992eb7773dec_01a13943-5545-7940-aaa8-e3517993a99c.jsonl",
+      "sha256": "0a9fbafc65fddbda20e142aa1e7c49404e76b2f12108b81e00eedcd21430636e"
+    },
+    {
+      "source": "rollout-2026-10-14T15-15-50-01a1393b-3df3-79f3-b736-992eb7773dec_01a13944-747e-7ca2-947e-65991a61dc59.jsonl",
+      "sha256": "043320e85616d24caf7bc3a2ca3ba8d5b14f5539d5694ad51752f96d068253af"
+    },
+    {
+      "source": "rollout-2026-10-14T15-18-40-01a1393b-3df3-79f3-b736-992eb7773dec_01a13947-103a-7ff2-a49e-d0d98a2bdb57.jsonl",
+      "sha256": "10551c6cd6d32025357201738347bff026ae3566fee8acda960dff6dad3094c6"
+    }
+  ],
+  "messageCount": 48
+}

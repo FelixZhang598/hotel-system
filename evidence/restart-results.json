@@ -1,0 +1,56 @@
+{
+  "at": "2026-10-14T07:54:25.567Z",
+  "base": "http://127.0.0.1:18084",
+  "dbPath": "/Users/felix/IdeaProjects/hotel-system/.runtime/acceptance/final/hotel.db",
+  "jarSha256": "de7cbaa444d2813b6eb5684e80bb16e0e8727c0ceb2aa1d25865fd10457ecd53",
+  "id": "A26",
+  "status": "PASS",
+  "tables": {
+    "check_in_records": 5,
+    "inventory_days": 291,
+    "order_events": 52,
+    "order_nights": 42,
+    "orders": 35,
+    "room_types": 3,
+    "rooms": 18,
+    "users": 3
+  },
+  "sameDatabase": true,
+  "tableSnapshotsEqual": true,
+  "apiSnapshotsEqual": true,
+  "relogin": true,
+  "events": [
+    {
+      "type": "start",
+      "name": "initial",
+      "pid": 33612,
+      "at": "2026-10-14T07:54:25.809Z"
+    },
+    {
+      "type": "stop",
+      "pid": 33612,
+      "exitCode": 143,
+      "signalCode": null,
+      "at": "2026-10-14T07:54:33.779Z"
+    },
+    {
+      "type": "start",
+      "name": "restart",
+      "pid": 33662,
+      "at": "2026-10-14T07:54:34.171Z"
+    },
+    {
+      "type": "stop",
+      "pid": 33662,
+      "exitCode": 143,
+      "signalCode": null,
+      "at": "2026-10-14T07:54:39.424Z"
+    }
+  ],
+  "snapshots": [
+    ".runtime/acceptance/final/db-before-restart.json",
+    ".runtime/acceptance/final/db-after-restart.json",
+    ".runtime/acceptance/final/api-before-restart.json",
+    ".runtime/acceptance/final/api-after-restart.json"
+  ]
+}
